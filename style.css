@@ -1,0 +1,535 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FEFDF9;
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+    width: 410px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FEFDF9;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 72px;
+}
+
+.sidebarText {
+    color: #000;
+    font-family: "IBM Plex Mono", Courier New, monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sidebarContent {
+    margin-top: 40px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+
+.imageContainer {
+    width: 100%;
+    height: auto;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebarButton {
+    width: fit-content;
+    height: fit-content;
+
+    margin: 0;
+    padding: 0;
+
+    align-self: flex-start;
+    text-align: left;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    color: #000;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+}
+
+.sidebarButton svg {
+    width: 26px;
+    transition: transform 0.2s ease, width 0.2s ease;
+}
+
+.sidebarButton:hover svg {
+    transform: translateX(6px) scaleX(1.2);
+}
+
+.sidebarButton.active {
+    background: #D9FF00;
+    border-radius: 4px;
+}
+
+.sidebarButton.active svg {
+    display: none;
+}
+
+.collapseButton {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.collapseArrow {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+/* rotate arrow when collapseButton has collapsed class */
+.collapseButton.collapsed .collapseArrow {
+    transform: rotate(180deg);
+}
+
+.sidebarContent {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebarContent {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Main container offsets sidebar */
+.mainContainer {
+  margin-left: 410px;            
+  width: calc(100% - 410px);     
+  padding: 20px;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+
+  min-width: 200px;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed ~ .mainContainer {
+  margin-left: 72px;
+  width: calc(100% - 72px);
+}
+
+.mainInner {
+  max-width: 1080px; 
+  margin: 0 auto; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.titleContainer {
+    width: 100%;
+    display: inline-flex;
+    height: 255px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.underline {
+    width: 100%;
+    height: 2px;
+    background: #000; 
+    margin-top: 10px;
+}
+
+h1 {
+    color: #000;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: clamp(32px, 5vw, 64px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*PROSJEKTER*/
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: 63% 37%;
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnLeft {
+    gap: 3%;
+}
+
+.columnRight {
+    gap: 1.5%
+}
+
+
+.projectItem {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projectItem img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay,
+.overlayUnder {
+    position: absolute;
+    background: #FEFDF9;
+    color: #000;
+    border: 1px solid #000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.overlayTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+}
+
+.overlayHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h2 {
+    color: #000;
+    text-align: left;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: clamp(12px, 1vw, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+.overlayTextContainer .underline {
+    height: 1px;
+    width: 100%;
+}
+
+.overlayTextContainer p {
+    color: #000;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: clamp(10px, 1vw, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.overlayArrow {
+    position: absolute;
+    bottom: 10px;         
+    right: 20px;                  
+}
+
+.overlay {
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateX(100%);
+}
+
+.projectItem:hover .overlay {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Overlay sliding up from the bottom */
+.overlayUnder {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;                  
+    justify-content: flex-end;    
+    align-items: flex-start;
+    transform: translateY(100%);  
+}
+
+.projectItem:hover .overlayUnder {
+    opacity: 1;
+    transform: translateY(0);     
+}
+
+.columnRight .projectItem:last-child .overlayUnder {
+    height: 90%;         
+}
+
+.columnRight .projectItem:last-child .overlayUnder .underline{
+    margin: 0;
+    margin-top: 3px;         
+}
+
+.columnRight .projectItem:last-child .overlayTextContainer h2 {
+    font-size: clamp(12px, 1vw, 14px);
+}
+
+.columnRight .projectItem:last-child .overlayTextContainer p {
+    font-size: clamp(10px, 1.2vw, 12px);
+}
+
+/* Arrow animation */
+
+.overlayArrow svg {
+    transition: transform 0.3s ease;
+}
+
+.overlayArrow svg:hover {
+    transform: translateX(5px);
+}
+
+/*ERFARING OG FERDIGHETER*/
+
+.pageTabs {
+    display: inline-flex;
+    border: 1px solid #000;
+    margin-top: 32px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pageTab {
+    width: 25%;
+    border: none;
+    outline: none;
+    background: #FEFDF9;
+    color: #000;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 16px 22px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pageTab:not(:last-child) {
+    border-right: 1px solid #000;
+}
+
+.pageTab.active {
+    background: #D9FF00;
+    font-weight: 500;
+}
+
+.pageTab:hover {
+    background: #ebe9e4;
+}
+
+.pageTab.active:hover {
+    background: #D9FF00;
+    font-weight: 500;
+    cursor: default;
+}
+
+
+/* Each content section under a tab */
+.tabContent {
+    display: none;       /* hide by default */
+    margin-top: 20px;
+    gap: 30px;
+}
+
+/* Show only the active tab content */
+.tabContent.active {
+    display: block;
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experienceCard {
+    border: 1px solid #000;
+    padding: 24px;
+    background: #FEFDF9;
+}
+
+.experienceCard h2 {
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: clamp(16px, 2vw, 24px);
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.experienceCard h2 span {
+    display: block;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: clamp(14px, 1.4vw, 18px);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.experiencePeriod {
+    color: rgba(31, 29, 32, 0.80);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+}
+
+.experienceCard p {
+    margin: 0;
+    margin-top: 10px;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.6;
+    color: #000;
+
+    font-style: normal;
+    font-weight: 450;
+    line-height: 20px;
+}
+
+/*Ferdigheter tabell*/
+
+.ferdigheterContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: stretch;
+}
+
+.ferdigheterBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    width: auto;
+    height: 100%;
+}
+
+.box {
+    border: 1px solid #000;
+    width: 100%;
+    align-items: center;
+    height: fit-content;
+
+}
+
+.box:last-child {
+    height: 100%;
+}
+
+.skillList {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+
+    color: #000;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.456px; /* 135.868% */
+    letter-spacing: 1.44px;
+}
+
+h3 {
+    color: #000;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 22.011px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.siteCredit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    pointer-events: none;
+
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+}
+
+/*MEDIA*/
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
+/* Responsive: single column on smaller screens */
+@media (max-width: 768px) {
+    .projectsContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;                   
+    }
+
+    .columnLeft,
+    .columnRight {
+        gap: 20px;                 
+    }
+}

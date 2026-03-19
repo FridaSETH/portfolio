@@ -1,0 +1,299 @@
+.backHeader {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.backButton svg {
+    width: 26px;
+    transition: transform 0.2s ease, width 0.2s ease;
+}
+
+.projectCard {
+    padding: 20px; 
+    border: black 1px solid;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    width: 100%;
+
+    border: black solid;
+    border-width: 1px 1px 0 1px;
+}
+
+.projectHeader p{
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+.projectTitle h1 {
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.projectTitle p {
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.projectDescription {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#raeserDescription {
+    background: #A0E4FF;
+}
+
+#hjaelpDescription {
+    background: #8DFF96;
+}
+
+#autoshipDescription {
+    background: #8696DE;
+}
+
+#autoshipDescription p{
+    color: #FEFDF9;
+}
+
+#nyttiDescription {
+    background: #012725;
+}
+
+#nyttiDescription p {
+    color: #C4D3AA;
+}
+
+#ukaDescription {
+    background: #FFCDCF;
+}
+
+.projectDescription p {
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 2%;
+}
+
+.projectSub h5{
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+
+    margin: 0;
+    padding: 40px 0 20px 0;
+}
+
+.projectUnderline {
+    border:#1A191D 0.5px solid;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.projectMain {
+    width: 100%;
+}
+
+.projectMain p {
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 31.922px;
+}
+
+.projectMain ul {
+    list-style: none;
+    padding-left: 0; 
+
+    color: #1A191D;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 31.922px;
+}
+
+.projectMain a {
+    color: inherit;        
+}
+
+.projectMain span {
+    color: #F99401;
+    font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.projectSub {
+    width: 100%;
+}
+
+.imgContainer {
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+  height: 460px;
+  border: #1A191D solid;
+  border-width: 1px 0;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.italicP{
+    color: #1A191D;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.922px; /* 159.609% */
+}
+
+i {
+    padding: 20px;
+}
+
+.doubleGrid12 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.doubleGrid21 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.doubleGrid p {
+    margin: 0;
+    padding: 0;
+}
+
+.altImgContainer {
+    width: 100%;
+    border: 1px solid #1A191D;
+    overflow: hidden;
+}
+
+.altImgContainer img {
+    display: block;       
+    width: 100%;          
+    height: 100%;         
+    object-fit: contain;    
+}
+
+.imgContainerTripple {
+  height: f;
+  border-width: 1px 0;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgContainer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoshipImg {
+    margin-left: -20px;
+    margin-right: -20px;
+    max-width: calc(100% + 40px);
+}
+
+.autoshipImg img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+#raeserPointer {
+    display: none;
+}
+
+#processImage {
+    border: none;
+}
+
+/*SCROLL TO TOP BUTTON*/
+
+#myBtn {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: #1A191D solid 1px;
+  background: #FEFDF9;
+  color: #1A191D;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+
+#myBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#myBtn:hover {
+  background-color: #dbdad4;
+}

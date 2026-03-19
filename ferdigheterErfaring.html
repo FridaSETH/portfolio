@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frida Selch Thuestad</title>
+    <link rel="stylesheet" href="https://use.typekit.net/plq3ddu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/img/pencil.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebarContent">
+            <div class="imageContainer">
+                <img src="/assets/img/me1.png" alt="Picture of me">
+            </div>
+            <div class="textContainer">
+                <p class="sidebarText"> 
+                    <b>Navn:</b> Frida Selch Thuestad </br>
+                    <b>Alder:</b> 25 år </br>
+                    <b>Nasjonalitet:</b> Danmark / Norge </br>
+                    </br>
+                    <b>Utdanning:</b> 5. år på Industriell design 5-årig master ved NTNU 
+                    i Trondheim, med spesialisering innenfor interaksjonsdesign</br>
+                    </br>
+                    <b>Interesser:</b> tjenestedesign, strategi, interaksjonsdesign, musikk, spill, matlaging og mye mer!
+                </p>
+            </div>
+            <div class="buttonContainer">
+                <button class="sidebarButton" onclick="window.location.href='/prosjekter.html'">
+                    Prosjekter
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="19" viewBox="0 0 42 19" fill="none">
+                        <path d="M40.8839 10.0888C41.372 9.60068 41.372 8.80923 40.8839 8.32107L32.9289 0.366121C32.4408 -0.122034 31.6493 -0.122034 31.1612 0.366121C30.673 0.854277 30.673 1.64573 31.1612 2.13389L38.2322 9.20496L31.1612 16.276C30.673 16.7642 30.673 17.5556 31.1612 18.0438C31.6493 18.5319 32.4408 18.5319 32.9289 18.0438L40.8839 10.0888ZM0 9.20496V10.455H40V9.20496V7.95496H0V9.20496Z" fill="black"/>
+                    </svg>
+                </button>
+                <button class="sidebarButton active" onclick="window.location.href='/ferdigheterErfaring.html'">
+                    Ferdigheter & Erfaring
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="19" viewBox="0 0 42 19" fill="none">
+                        <path d="M40.8839 10.0888C41.372 9.60068 41.372 8.80923 40.8839 8.32107L32.9289 0.366121C32.4408 -0.122034 31.6493 -0.122034 31.1612 0.366121C30.673 0.854277 30.673 1.64573 31.1612 2.13389L38.2322 9.20496L31.1612 16.276C30.673 16.7642 30.673 17.5556 31.1612 18.0438C31.6493 18.5319 32.4408 18.5319 32.9289 18.0438L40.8839 10.0888ZM0 9.20496V10.455H40V9.20496V7.95496H0V9.20496Z" fill="black"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="collapseButton">
+            <svg class="collapseArrow"  xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+            <path d="M42 4.52308L10.9846 35.5385L38.7692 35.5385L38.7692 42L0 42L4.62318e-07 3.23077L6.46154 3.23077L6.46154 31.0154L37.4769 -3.36779e-06L42 4.52308Z" fill="#1F1F1F"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="mainContainer"> 
+        <div class="mainInner">
+            <div class="titleContainer">
+                <h1>Ferdigheter & Erfaring</h1>
+                <div class="underline"></div>
+            </div>
+
+            <div class="pageTabs">
+                <button class="pageTab active" data-target="ferdigheter">Ferdigheter</button>
+                <button class="pageTab" data-target="utdanning">Utdanning</button>
+                <button class="pageTab" data-target="erfaring">Erfaring</button>
+                <button class="pageTab" data-target="frivilligeVerv">Frivillige verv</button>
+            </div>
+
+            <div class="tabContents">
+                <div class="tabContent active" id="ferdigheter">
+                    <div class="ferdigheterContainer">
+                        <div class="ferdigheterBox">
+                            <div class="box">
+                                <h3><b>PROGRAMMER</b></h3>
+                            </div>
+                            <div class="box">
+                                <ul class="skillList">
+                                    <li>Figma</li>
+                                    <li>Illustrator</li>
+                                    <li>InDesign</li>
+                                    <li>Photoshop</li>
+                                    <li>Fusion 360</li>
+                                    <li>Keyshot 11</li>
+                                    <li>Adobe Elements</li>
+                                    <li>Audacity</li>
+                                    <li>Excel</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ferdigheterBox">
+                            <div class="box">
+                                <h3><b>KODING</b></h3>
+                            </div>
+                            <div class="box">
+                                <ul class="skillList">
+                                    <li>Python</li>
+                                    <li>HTML & CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>C++</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ferdigheterBox">
+                            <div class="box">
+                                <h3><b>SPRÅK</b></h3>
+                            </div>
+                            <div class="box">
+                                <ul class="skillList">
+                                    <li>Norsk</li>
+                                    <li>Dansk</li>
+                                    <li>Engelsk C2</li>
+                                    <li>Spansk A1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ferdigheterBox">
+                            <div class="box">
+                                <h3><b>ANNET</b></h3>
+                            </div>
+                            <div class="box">
+                                <ul class="skillList">
+                                    <li>Førerkort klasse B</li>
+                                    <li>Førstehjelpskurs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabContent" id="utdanning">
+                    <div class="experienceList">
+                    <article class="experienceCard">
+                        <h2><b>INDUSTRIELL DESIGN, MASTERPROGRAM 5-ÅRIG (SIVILINGINEØR)</b><span>NORGES TEKNISK-NATURVITENSKAPELIGE UNIVERSITET</span></h2>
+                        <p class="experiencePeriod">AUGUST 2021 – JUNI 2026</p>
+                        <p>Student ved NTNU. Industriell Design er et integrert masterstudie der man som ferdigutdannet blir designer med teknologiforståelse og får tittelen sivilingeniør.  Opptakskrav på ordinær kvote på 61.3 studiepoeng.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2> <b>AUGMENTED PASTS: HACKING HISTORY WITH DIGITAL TOOLS FROM THE FUTURE</b><span>BAUHAUS UNIVERSITETET I WEIMAR</span></h2>
+                        <p class="experiencePeriod">MARS 2025</p>
+                        <p>Et intensivt kurs der vi laget en AR installasjon på et historisk sted i den tyske byen Weimar. Et kurs i regi av Erasmus, nominert av hjemmeuniversitett NTNU.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>HALVÅRIG REALFAGSKURS</b><span>NORGES TEKNISK-NATURVITENSKAPELIGE UNIVERSITET</span></h2>
+                        <p class="experiencePeriod">JANUAR 2021 – MAI 2021</p>
+                        <p>Student ved NTNU, halvårig realfagskurs som er adgangsgivende til sivilingeniør-utdannelsene ved NTNU.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>KUNST- OG MUSIKKLINJE</b> <span>SUNNHORDLAND FOLKEHØYSKOLE</span></h2>
+                        <p class="experiencePeriod">2019 - 2020</p>
+                        <p>Elev ved Sunnhordland Folkehøyskole på linjene kunst+ og musikk.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>MUSIKK, DANS & DRAMA</b><span>FIRDA VIDEREGÅENDE SKULE</span></h2>
+                        <p class="experiencePeriod">2016 - 2019</p>
+                        <p>Danselinje med generell studiekompetanse.</p>
+                    </article>
+                    </div>
+                </div>
+                <div class="tabContent" id="erfaring">
+                    <div class="experienceList">
+                    <article class="experienceCard">
+                        <h2><b>BARTENDER</b><span>HABITAT</span></h2>
+                        <p class="experiencePeriod">HØST 2025 - NÅ</p>
+                        <p>Bartender hos Habitat i Trondheim, en bar med fokus på craft beer fra lokale og internasjonale bryggerier. 
+                        Baren serverer også et utvalg av pizzaer, mezze og lunsjtilbud som vi selv tilbereder og serverer fra kjøkkenet.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>DESIGNKONSULENT</b><span>BOUVET NORD</span></h2>
+                        <p class="experiencePeriod">SOMMER 2025</p>
+                        <p>Sommerjobb som designkonsulent i Bouvet Nord, avdeling Trondheim. Hadde ansvar for redesign av en kundes nettside
+                             med fokus på brukervennlighet og oppdatert visuell profil, i et tverrfaglig team med fire utviklere. 
+                             Deltok også i frontend-utvikling sammen med utviklerne og fikk erfaring med GitHub og deres arbeidsprosesser.
+                             Rollen ga verdifull erfaring med konsulentarbeid, kundedialog og samarbeid på tvers av fagfelt.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>STUDENTASSISTENT</b><span>VISUELL FORMIDLING, NTNU</span></h2>
+                        <p class="experiencePeriod">VÅR 2025</p>
+                        <p>Studentassistent i faget TPD4114 Visuell formidling. I faget skal studentene levere en infografikk plakat 
+                            samt en videopresentasjon. Som studentassisten gir jeg tilbakemeldinger på studentene sitt arbeid underveis i prosessen.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>BARTENDER & ARRANGEMENTSVERT</b><span>LOKAL BAR, KLUBB & SCENE</span></h2>
+                        <p class="experiencePeriod">APRIL 2024 - APRIL 2025</p>
+                        <p>Lokal Bar, Klubb & Scene i Trondheim består av tre områder med hvert sitt konsept. På cocktailbaren er 
+                            det en rolig stemning med fokus på personlig service og gode cocktails. Scenebaren blir brukt til alt 
+                            fra konserter til quiz med en bar som serverer enkle drinker, øl og vin. I kjelleren finnes klubben 
+                            med DJ sett i helgene og en bar med høyt tempo. </br></br>
+
+                            Som ansatt har jeg hatt rullerende arbeidsoppgaver I både cocktailbaren, klubben og scenen samt garderobe- 
+                            og covervakt i helgene. I tillegg til å være bartender har jeg også vært artistvert for DJ’s og band som har 
+                            spillet på Lokal. En gøy jobb med høyt tempo og gode kollegaer!</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>SERVITØR</b><span>KALAS & CANASTA</span></h2>
+                        <p class="experiencePeriod">HØST 2021 - HØST 2023</p>
+                        <p>Kalas & Canasta er en uformell restaurant på Bakklandet med fokus på god mat og vin. Vi har en rullerende 
+                            meny basert på sesongens beste trønderske råvarer. Jobben krever planleggingsevne, snakkesalighet samt 
+                            gode forkunnskaper om maten og vinen vi serverer. Arbeidsoppgavene mine innebar servering av mat/drikke, 
+                            brygging av kaffe, miksing av drinker, booking av borde på vegne av gjester, oppvask, opp-/avdekking av 
+                            borde samt vask ved åpne-/stengerutiner.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>SERVITØR, BARTENDER OG RESEPSJONIST</b><span> LEIKANGER FJORDHOTEL</span></h2>
+                        <p class="experiencePeriod">SOMMEREN 2020 & 2021</p>
+                        <p>Resepsjonist og servitør ved Leikanger Fjordhotel sommeren 2020 og 2021. Arbeidsoppgaver som mat- 
+                            og drikkeservering, blanding av drinks og diverse rengjøring. Som resepsjonist var jeg ansvarlig 
+                            for inn- og utsjekk, booking, ta imot gjestene og sørge for god oppfølging og håndtering av diverse 
+                            forespørsler. Gjennom jobben fikk jeg god erfaring innen kundebehandling og problemløsning. 
+                            Resepsjoniststillingen ved hotellet innebar også et overordnet ansvar for og samkjøring av 
+                            kommunikasjonen mellom ansatte i kjøkken, restaurant, lobby/bar og rengjøring. Ble fortrolig med 
+                            serverings- etikette og hotel- og restaurantsystemet Picasso.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>SERVITØR</b><span>BRITANNIA</span></h2>
+                        <p class="experiencePeriod">SEPTEMBER 2020 - JANUAR 2021</p>
+                        <p>Tilkallingshjelp i Palmehaven på Britannia. Primært frokost- og lunsjservering i hverdagene, samt 
+                            servering av Afternoon-Tea i helgene. En serveringsjobb med stor vektlegging på kvalitet, 
+                            presentasjon og service.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>FERIEVIKAR I TILTAK FOR FUNKSJONSHEMMEDE</b><span>LEIKANGER KOMMUNE</span></h2>
+                        <p class="experiencePeriod">SOMMEREN 2019</p>
+                        <p>Ferievikar/Assistent ved tiltak for funksjonshemmede i Leikanger kommune sommeren 2019.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>SERVITØR</b><span>SKJOLDEN HOTEL</span></h2>
+                        <p class="experiencePeriod">VÅREN 2017</p>
+                        <p>Servering ved større arrangement på hotellet.</p>
+                    </article>
+                    </div>
+                </div>
+                <div class="tabContent" id="frivilligeVerv">
+                    <div class="experienceList">
+                    <article class="experienceCard">
+                        <h2><b>EFFEKTDESIGNER</b><span>UKA 2025, STUDENTERSAMFUNDET I TRONDHEIM</span></h2>
+                        <p class="experiencePeriod">VÅR 2025 - HØST 2025</p>
+                        <p>Effektdesigner i UKA 2025, Norges største kulturfestival som arrangeres annet hvert år av frivillige 
+                            studenter i Trondheim. Som effektdesigner har jeg og mine medstudenter ansvar for å designe alt av 
+                            merch som selges og distribueres under UKA-25. I tillegg designer vi også klærne til den såkalte UKE-bussen.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>ØKONOMIANSVARLIG I KULTURUTVALGET</b><span>STUDENTERSAMFUNDET I TRONDHEIM</span></h2>
+                        <p class="experiencePeriod">HØST 2023 - HØST 2024</p>
+                        <p>Som økonomiansvarlig i Kulturutvalget har man overordnet ansvar for gruppens økonomi. Dette innebærer å føre regnskap for gruppens utgifter, presentere budsjettforslag til Samfundet, lage billag, godkjenne fakturaer og utarbeide kontrakter med artister og foredragsholdere.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>ARRANGØR/BOOKER</b> <span>KULTURUTVALGET, STUDENTERSAMFUNDET I TRONDHEIM</span></h2>
+                        <p class="experiencePeriod">HØST 2022 - HØST 2024</p>
+                        <p>Som studentfrivillig i Kulturutvalget er man ansvarlig for både booking og arrangering av arrangement på 
+                            Studentersamfundet. Bookingen innebærer å inngå avtaler med artister/foredragsholdere i forkant av arrangementet, 
+                            samt å koordinere disse med andre grupper på Samfundet som er medansvarlige for husets drift. 
+                            På selve dagen innebærer vervet å ha overordnet ansvar for arrangementet. Arbeidsoppgaver innebærer 
+                            dette opprigg og nedrigg av lokaler til konsert/foredrag/filmvisning, billettsjekk samt å ivareta 
+                            artister/foredragsholdere og kollegaer som er på jobb.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>DANSEINSTRUKTØR</b> <span>DANS UTEN GRENSER</span></h2>
+                        <p class="experiencePeriod">2015 - 2017</p>
+                        <p>Frivillig danseinstruktør for barn og ungdommer i Leikanger kommune.</p>
+                    </article>
+
+                    <article class="experienceCard">
+                        <h2><b>UNGDOMSREPRESENTANT I FREDERIKSBERG KOMMUNE</b> <span>FRB KOMMUNE</span></h2>
+                        <p class="experiencePeriod">2014 - 2015</p>
+                        <p>Medlem av Frederiksberg Ungeråd.</p>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="siteCredit">Designed & coded by Frida Selch Thuestad</div>
+
+<script src="/assets/scripts/sidebar.js"></script>
+<script src="/assets/scripts/tabs.js"></script>
+
+</body>
