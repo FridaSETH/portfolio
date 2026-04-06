@@ -310,6 +310,27 @@ i {
     line-height: 31.922px;
 }
 
+.nyttiGrid {
+  display: flex;
+  align-items: flex-start;   
+  gap: 24px;                 
+}
+
+.nyttiGrid p {
+  flex: 1;                   
+  margin: 0;  
+}
+
+.nyttiImg {
+  flex: 0 0 300px;           
+}
+
+.nyttiImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /*SCROLL TO TOP BUTTON*/
 
 #myBtn {
