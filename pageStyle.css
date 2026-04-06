@@ -316,8 +316,8 @@ i {
   opacity: 0;
   visibility: hidden;
   position: fixed; 
-  bottom: 20px;
-  right: 30px;
+  bottom: 40px;
+  right: 0px;
   z-index: 99;
   border: #1A191D solid 1px;
   background: #FEFDF9;
