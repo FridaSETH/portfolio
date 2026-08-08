@@ -103,6 +103,14 @@
     background: #FFCDCF;
 }
 
+#thesisDescription {
+    background: #114FAF;
+}
+
+#thesisDescription p{
+    color: #FEFDF9;
+}
+
 .projectDescription p {
     color: #1A191D;
     font-family: "neue-haas-grotesk-display", Helvetica, Arial, sans-serif;
